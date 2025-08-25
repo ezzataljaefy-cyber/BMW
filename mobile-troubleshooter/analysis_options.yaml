@@ -1,0 +1,42 @@
+# This file configures the static analysis results for your project (errors,
+# warnings, and lints).
+#
+# This enables the lint rules recommended by the Flutter team.
+# These rules are designed to encourage good coding practices.
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  # The lint rules are categorized in "groups" such as "style" and "pub".
+  # You can disable specific rules by listing them here, or you can
+  # disable entire groups of rules by using the `enable-experiment` flag.
+  #
+  # For a list of all available rules, see
+  # https://dart-lang.github.io/linter/lints/index.html.
+  #
+  # To see the rules that are enabled for `package:flutter_lints`, see
+  # https://github.com/flutter/packages/blob/main/packages/flutter_lints/lib/flutter.yaml
+  rules:
+    # prefer_single_quotes: true  # Uncomment to enable single quotes
+    # always_specify_types: true
+    # omit_local_variable_types: false
+    # avoid_print: true # Uncomment to discourage use of print().
+    # prefer_const_constructors: true
+    # prefer_const_declarations: true
+    # prefer_final_fields: true
+    # prefer_final_locals: true
+    # unnecessary_new: true
+    # unnecessary_this: true
+    # prefer_relative_imports: true
+    # avoid_relative_lib_imports: true
+
+analyzer:
+  exclude:
+    - '**/*.g.dart'
+    - '**/*.freezed.dart'
+  errors:
+    # treat missing required parameters as an error (good for null-safety)
+    missing_required_param: error
+    # treat hints as warnings
+    hint: warning
+  language:
+    strict-raw-types: true

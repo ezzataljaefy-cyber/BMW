@@ -1,0 +1,55 @@
+# General
+.DS_Store
+.idea
+.vscode/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+
+# Flutter
+/build/
+/ios/Pods/
+/ios/Flutter/App.framework
+/ios/Flutter/Flutter.framework
+/ios/Flutter/engine
+/ios/Flutter/flutter_assets
+/ios/Flutter/.last_build_id
+/ios/.symlinks/
+/ios/Runner/GeneratedPluginRegistrant.h
+/ios/Runner/GeneratedPluginRegistrant.m
+/ios/Runner/GoogleService-Info.plist
+
+# Android
+/android/app/google-services.json
+/android/key.properties
+/android/.gradle/
+/android/app/build/
+/android/build/
+/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+
+
+# Environment files
+.env
+*.env
+.env.*
+
+# Sensitive files
+*.pem
+*.jks
+
+# Log files
+*.log
+
+# Test files
+coverage/
+test/coverage/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+fastlane/fastlane.log

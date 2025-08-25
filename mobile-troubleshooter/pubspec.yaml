@@ -1,0 +1,70 @@
+name: mobile_troubleshooter
+description: A mobile troubleshooter application.
+
+# Prevent accidental publishing to pub.dev.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management
+  flutter_riverpod: ^2.3.6
+
+  # Firebase
+  firebase_core: ^2.15.0
+  firebase_auth: ^4.7.2
+  google_sign_in: ^6.1.4
+  firebase_messaging: ^14.6.5
+  firebase_analytics: ^10.4.5
+  firebase_crashlytics: ^3.3.5
+  firebase_remote_config: ^4.2.5
+
+  # Database & Caching
+  sqflite: ^2.3.0
+  path_provider: ^2.0.15
+  shared_preferences: ^2.2.0
+
+  # Networking
+  dio: ^5.3.2
+
+  # UI & UX
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.18.0
+  flutter_html: ^3.0.0-beta.2
+  video_player: ^2.7.0
+  chewie: ^1.7.0
+  cached_network_image: ^3.2.3
+
+  # Ads & Monetization
+  google_mobile_ads: ^3.0.0
+  # flutter_facebook_auth: ^5.0.8 # For FB ads, if needed
+  in_app_purchase: ^3.1.7
+
+  # Utility
+  image_picker: ^1.0.1 # For screenshot upload
+  path: ^1.8.3
+  url_launcher: ^6.1.12
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - demo-data/assets/images/
+    - assets/l10n/
+
+  # Enable internationalization
+  generate: true

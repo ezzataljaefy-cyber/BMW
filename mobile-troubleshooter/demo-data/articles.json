@@ -1,0 +1,94 @@
+{
+  "articles": [
+    {
+      "id": "art001",
+      "title": "How to Improve Battery Life on Your Smartphone",
+      "author": "Tech Guru",
+      "date": "2023-10-26T10:00:00Z",
+      "isPremium": false,
+      "tags": ["battery", "android", "ios"],
+      "content": "<h1>Understanding Battery Drain</h1><p>Modern smartphones are powerful, but their batteries don't always last as long as we'd like. The biggest culprits are often screen brightness, background app refresh, and poor signal.</p><p>Here are some tips:</p><ul><li>Lower your screen brightness.</li><li>Turn off background app refresh for non-essential apps.</li><li>Use Wi-Fi whenever possible.</li></ul><img src='https://example.com/images/battery_save.png' />"
+    },
+    {
+      "id": "art002",
+      "title": "Solving Common Wi-Fi Connection Problems",
+      "author": "Net Master",
+      "date": "2023-10-25T14:30:00Z",
+      "isPremium": false,
+      "tags": ["wifi", "networking", "troubleshooting"],
+      "content": "<h2>Can't connect to Wi-Fi?</h2><p>It's a common frustration. Before you call your ISP, try these simple steps:</p><ol><li><strong>Restart your router:</strong> Unplug it, wait 30 seconds, and plug it back in.</li><li><strong>Forget the network:</strong> On your device, go to Wi-Fi settings, select the network, and tap 'Forget'. Then try reconnecting.</li><li><strong>Check for interference:</strong> Microwaves and other electronics can interfere with your signal.</li></ol><p>For a more detailed walkthrough, watch this video:</p><iframe src='https://www.youtube.com/embed/dQw4w9WgXcQ'></iframe>"
+    },
+    {
+      "id": "art003",
+      "title": "What to Do When Your Phone Gets Wet",
+      "author": "Dr. Droplet",
+      "date": "2023-10-24T09:00:00Z",
+      "isPremium": false,
+      "tags": ["water damage", "hardware", "repair"],
+      "content": "<h1>Oops! Water Damage</h1><p>First, <strong>do not turn it on!</strong> Turning on a wet phone can short-circuit the components.</p><h2>Steps to take immediately:</h2><ul><li>Power it off immediately if it's still on.</li><li>Remove the SIM card and any memory cards.</li><li>Gently pat the phone dry with a soft cloth.</li><li>Place it in a dry, well-ventilated area for at least 48 hours. Do NOT use a hairdryer.</li></ul><p>The popular 'rice trick' is a myth and can introduce dust and starch into the ports. Silica gel packets are a better option.</p>"
+    },
+    {
+      "id": "art004",
+      "title": "Clearing Cache and App Data: What's the Difference?",
+      "author": "Cache King",
+      "date": "2023-10-23T11:00:00Z",
+      "isPremium": false,
+      "tags": ["performance", "storage", "android"],
+      "content": "<h2>Cache vs. Data</h2><p><strong>Clearing cache</strong> removes temporary files that apps use to load faster. It's generally safe to clear and can free up space and fix minor glitches.</p><p><strong>Clearing app data</strong> is more drastic. It resets an app to its factory state, deleting all your settings, accounts, and saved files associated with that app. Think of it as a fresh install. Do this only if an app is severely malfunctioning.</p>"
+    },
+    {
+      "id": "art005",
+      "title": "A Guide to Smartphone Security & Privacy",
+      "author": "SecuRight",
+      "date": "2023-10-22T16:00:00Z",
+      "isPremium": false,
+      "tags": ["security", "privacy", "malware"],
+      "content": "<h1>Protecting Your Digital Life</h1><p>Your phone is a gateway to your personal information. Here's how to protect it:</p><ul><li><strong>Use a strong, unique passcode.</strong> Biometrics (fingerprint, face ID) are even better.</li><li><strong>Be wary of public Wi-Fi.</strong> Use a VPN if you must connect.</li><li><strong>Only download apps from official app stores.</strong></li><li><strong>Review app permissions.</strong> Does that calculator app really need access to your contacts?</li></ul>"
+    },
+    {
+      "id": "art006",
+      "title": "Troubleshooting Bluetooth Pairing Issues",
+      "author": "Blue Tooth",
+      "date": "2023-10-21T13:45:00Z",
+      "isPremium": false,
+      "tags": ["bluetooth", "accessories", "troubleshooting"],
+      "content": "<h2>Can't connect your headphones?</h2><p>Bluetooth can be finicky. Try these steps:</p><ol><li>Make sure the device is in pairing mode (often indicated by a flashing light).</li><li>Turn your phone's Bluetooth off and on again.</li><li>Unpair all old or unused devices from your phone's Bluetooth list.</li><li>Ensure the devices are close to each other.</li></ol>"
+    },
+    {
+      "id": "art007",
+      "title": "How to Back Up Your Phone's Data",
+      "author": "Data Guardian",
+      "date": "2023-10-20T10:00:00Z",
+      "isPremium": false,
+      "tags": ["backup", "data", "cloud"],
+      "content": "<h1>Don't Lose Your Memories</h1><p>Backing up your phone is crucial. You have two main options:</p><h3>Cloud Backup</h3><p>Services like Google Photos, Google Drive (for Android), and iCloud (for iOS) automatically back up your data over the internet. This is the easiest and most reliable method.</p><h3>Local Backup</h3><p>You can connect your phone to a computer and manually copy over files. This gives you direct control but requires more effort.</p>"
+    },
+    {
+      "id": "art008",
+      "title": "[Premium] Advanced Performance Tweaks for Android",
+      "author": "Droid Modder",
+      "date": "2023-10-19T18:00:00Z",
+      "isPremium": true,
+      "tags": ["premium", "android", "performance", "developer options"],
+      "content": "<h1>Unlock Your Android's Full Potential</h1><p>This is a premium article. To access these advanced tips, please subscribe.</p><p>Once subscribed, you'll learn about:</p><ul><li>Enabling Developer Options.</li><li>Adjusting animation scales for a faster UI feel.</li><li>Forcing 4x MSAA for better gaming graphics (at the cost of battery).</li><li>Limiting background processes to save RAM and battery.</li></ul><p>These tweaks can make a noticeable difference but should be used with caution.</p>"
+    },
+    {
+      "id": "art009",
+      "title": "[Premium] Recovering Deleted Photos and Files",
+      "author": "Data Recovery Inc.",
+      "date": "2023-10-18T12:00:00Z",
+      "isPremium": true,
+      "tags": ["premium", "data recovery", "files"],
+      "content": "<h1>Deleted Something Important?</h1><p>This is a premium article. Subscribe to learn about the best methods for recovering deleted data.</p><p>We cover:</p><ul><li>Checking the 'Recently Deleted' or 'Trash' folders in your gallery and file manager apps.</li><li>Using desktop software to scan your phone's internal storage.</li><li>Understanding the limitations and why it's not always possible to recover data.</li></ul><p><strong>Note:</strong> The chances of recovery are much higher if you act quickly and stop using the device to prevent the deleted data from being overwritten.</p>"
+    },
+    {
+      "id": "art010",
+      "title": "[Premium] A Deep Dive into Mobile Network Issues (5G/LTE)",
+      "author": "Signal Pro",
+      "date": "2023-10-17T15:00:00Z",
+      "isPremium": true,
+      "tags": ["premium", "networking", "5g", "lte", "signal"],
+      "content": "<h1>No Service? Slow Data?</h1><p>This premium guide explores the complex world of mobile networks.</p><p>Subscribe to learn about:</p><ul><li>The difference between 5G, LTE, and VoLTE.</li><li>How to read signal strength values (dBm).</li><li>Using secret dialer codes to access hidden network information.</li><li>Manually selecting network operators.</li><li>When a SIM card replacement might be necessary.</li></ul><img src='https://example.com/images/network_tower.png' />"
+    }
+  ]
+}
