@@ -1,0 +1,45 @@
+name: Flutter CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    # Setup Java for Flutter
+    - uses: actions/setup-java@v3
+      with:
+        distribution: 'zulu'
+        java-version: '11'
+
+    # Setup Flutter
+    - uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.13.0' # Specify a stable version
+        channel: 'stable'
+        cache: true
+
+    - name: Install dependencies
+      run: flutter pub get
+
+    - name: Analyze project
+      run: flutter analyze
+
+    - name: Run tests
+      run: flutter test
+
+    # Note: Building the app is commented out as it might require
+    # secrets and full native setup, which is better suited for a
+    # separate 'release' workflow.
+    # - name: Build APK
+    #   run: flutter build apk --debug
+
+    # - name: Build App Bundle
+    #   run: flutter build appbundle --release

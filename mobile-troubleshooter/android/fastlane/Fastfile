@@ -1,0 +1,37 @@
+default_platform(:android)
+
+platform :android do
+  desc "Build debug and release versions of the app"
+  lane :beta do
+    # Build a debug APK for testing
+    flutter(command: "build", options: { "apk": "--debug" })
+
+    # Build a release App Bundle (AAB)
+    flutter(command: "build", options: { "aab": "--release" })
+  end
+
+  desc "Deploy a new version to the Google Play Store"
+  lane :deploy do
+    # Ensure all tests pass before deploying
+    # sh "flutter test"
+
+    # Increment the version number
+    # increment_version_code(
+    #   gradle_file_path: "./app/build.gradle"
+    # )
+    # increment_version_name(
+    #   gradle_file_path: "./app/build.gradle",
+    #   version_name: "1.0.#{lane_context[SharedValues::VERSION_CODE]}"
+    # )
+
+    # Build the release AAB
+    flutter(command: "build", options: { "aab": "--release" })
+
+    # Upload to Google Play
+    # upload_to_play_store(
+    #   track: 'internal',
+    #   aab: '../build/app/outputs/bundle/release/app-release.aab',
+    #   json_key: ENV['GOOGLE_PLAY_SERVICE_ACCOUNT_JSON'] # Path to your JSON key file, stored in GitHub Secrets
+    # )
+  end
+end

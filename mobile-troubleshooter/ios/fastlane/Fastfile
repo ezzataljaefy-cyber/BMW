@@ -1,0 +1,49 @@
+default_platform(:ios)
+
+platform :ios do
+  desc "Build debug and release versions for iOS"
+  lane :beta do
+    # Build for simulator
+    flutter(command: "build", options: { "ios": "--debug --simulator" })
+
+    # Build IPA for testing
+    # This requires code signing to be set up in Xcode
+    # build_app(
+    #   workspace: "Runner.xcworkspace",
+    #   scheme: "Runner",
+    #   export_method: 'ad-hoc'
+    # )
+  end
+
+  desc "Deploy a new version to the App Store"
+  lane :deploy do
+    # Ensure all tests pass
+    # sh "flutter test"
+
+    # Set up code signing from App Store Connect API Key
+    # app_store_connect_api_key(
+    #   key_id: ENV['APP_STORE_CONNECT_API_KEY_ID'],
+    #   issuer_id: ENV['APP_STORE_CONNECT_ISSUER_ID'],
+    #   key_filepath: ENV['APP_STORE_CONNECT_PRIVATE_KEY_PATH'], # Path to .p8 file
+    #   duration: 1200, # optional
+    #   in_house: false # optional
+    # )
+
+    # Increment build number
+    # increment_build_number(
+    #   xcodeproj: "Runner.xcodeproj"
+    # )
+
+    # Build the IPA
+    # build_app(
+    #   workspace: "Runner.xcworkspace",
+    #   scheme: "Runner",
+    #   export_method: 'app-store'
+    # )
+
+    # Upload to TestFlight
+    # upload_to_testflight(
+    #   skip_waiting_for_build_processing: true
+    # )
+  end
+end

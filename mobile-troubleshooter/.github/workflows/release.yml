@@ -1,0 +1,78 @@
+name: Flutter Release
+
+on:
+  workflow_dispatch: # Allows manual triggering
+    inputs:
+      version:
+        description: 'App Version (e.g., 1.0.1+3)'
+        required: true
+
+jobs:
+  build_and_release:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'zulu'
+        java-version: '11'
+
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.13.0'
+        channel: 'stable'
+        cache: true
+
+    - name: Install dependencies
+      run: flutter pub get
+
+    # =================================================
+    # == ANDROID RELEASE ==============================
+    # =================================================
+    - name: 'Build Android App Bundle (Release)'
+      run: flutter build appbundle --release --build-name=${{ github.event.inputs.version }} --build-number=${{ github.run_number }}
+
+    # - name: 'Upload Android AAB to Play Store'
+    #   uses: r0adkll/upload-google-play@v1
+    #   with:
+    #     serviceAccountJsonPlainText: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+    #     packageName: '<<PACKAGE_NAME>>'
+    #     releaseFiles: build/app/outputs/bundle/release/app-release.aab
+    #     track: internal
+    #     status: completed
+
+    # =================================================
+    # == IOS RELEASE ==================================
+    # =================================================
+    # The iOS build needs to run on a macOS runner
+    # This is just a placeholder to show the structure.
+    # A real workflow would have a separate job for iOS.
+    # - name: 'Build iOS IPA (Release)'
+    #   if: runner.os == 'macOS'
+    #   run: flutter build ipa --release --build-name=${{ github.event.inputs.version }} --build-number=${{ github.run_number }}
+
+    # - name: 'Upload iOS IPA to App Store Connect'
+    #   if: runner.os == 'macOS'
+    #   uses: apple-actions/upload-testflight-build@v1
+    #   with:
+    #     build-path: build/ios/ipa/*.ipa
+    #     issuer-id: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+    #     api-key-id: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+    #     api-private-key: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY }}
+
+    # =================================================
+    # == CREATE GITHUB RELEASE ========================
+    # =================================================
+    - name: 'Create GitHub Release'
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "build/app/outputs/bundle/release/*.aab"
+        tag: "v${{ github.event.inputs.version }}"
+        token: ${{ secrets.GITHUB_TOKEN }}
+        body: "Release version ${{ github.event.inputs.version }}"
+        prerelease: true
+        allowUpdates: true
